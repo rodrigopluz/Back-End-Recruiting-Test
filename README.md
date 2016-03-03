@@ -46,7 +46,8 @@
       "uuid": "",
       "type": "",
       "content": "",
-      "sort_order" : "",
+      "sort_order" : 0,
+      "done" : true|false,
       "date_created": ""
    }
 ```
