@@ -8,5 +8,13 @@
   "minimum-stability" : "dev",
   "config" : {
     "bin-dir" : "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\Server\\": "src/Server",
+      "App\\Controllers\\": "src/Controllers",
+      "App\\Models\\": "src/Models",
+      "App\\DB\\": "src/DB"
+    }
   }
 }
