@@ -4,7 +4,7 @@ namespace App\DB;
 
 use App\DB\Singleton;
 
-class DBTask extends Singleton
+class DBTask extends Single
 {
     const COLLECTION_TASK = 'tasks.json';
     const DB_FILE = __DIR__ . '/Collections/';

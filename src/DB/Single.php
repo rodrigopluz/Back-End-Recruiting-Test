@@ -2,7 +2,7 @@
 
 namespace App\DB;
 
-class Singleton
+class Single
 {
     private static $instance;
     
