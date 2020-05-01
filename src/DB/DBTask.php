@@ -2,7 +2,7 @@
 
 namespace App\DB;
 
-use App\DB\Singleton;
+use App\DB\Single;
 
 class DBTask extends Single
 {

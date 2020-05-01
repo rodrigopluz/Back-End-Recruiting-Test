@@ -20,19 +20,19 @@ class Task
         if (!$this->validateType($type) && !$this->validateContent($content))
             $this->uuid = "";
         else {
-            $this->uuid = md5(uniqid(rand(), true));
             $this->done = $done;
             $this->type = $type;
             $this->content = $content;
             $this->sortOrder = $sortOrder;
             $this->dateCreated = new \DateTime();
+            $this->uuid = md5(uniqid(rand(), true));
         }
     }
 
     public function validateType($type)
     {
         if (!\in_array($type, $this->typesAllowed)) {
-            $this->setErrorMessage("The task type you provided is not supported. You can only use shopping or work.");
+            $this->setErrorMessage("The task type you provided is not supported.");
             return null;
         }
     }
@@ -40,7 +40,7 @@ class Task
     public function validateContent($content)
     {
         if (!isset($content) || empty($content)) {
-            $this->setErrorMessage("Bad move! Try removing the task instead of deleting its content.");
+            $this->setErrorMessage("Try removing the task instead of deleting its content.");
             return null;
         }
     }

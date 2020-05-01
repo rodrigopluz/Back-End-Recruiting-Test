@@ -16,5 +16,12 @@
       "App\\Models\\": "src/Models",
       "App\\DB\\": "src/DB"
     }
-  }
+  },
+  "authors": [
+    {
+        "name": "Rodrigo Pereira",
+        "email": "rodrigopluz@gmail.com",
+        "homepage": "https://github.com/rodrigopluz"
+    }
+  ]
 }

@@ -12,7 +12,7 @@ class TaskController
 
         if (!$tasks) {
             http_response_code(200);
-            return json_encode(["message" => "Wow. You have nothing else to do. Enjoy the rest of your day!"]);
+            return json_encode(["message" => "Success"]);
         }
 
         http_response_code(200);
@@ -24,7 +24,7 @@ class TaskController
         $task = Model::find();
         if (!$task) {
             http_response_code(200);
-            return json_encode(["message" => "Wow. You have nothing else to do. Enjoy the rest of your day!"]);
+            return json_encode(["message" => "Success"]);
         }
 
         http_response_code(200);

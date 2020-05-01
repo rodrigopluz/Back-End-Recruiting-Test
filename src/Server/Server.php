@@ -43,7 +43,7 @@ class Server
                 break;
             default:
                 http_response_code(500);
-                echo json_encode(['error' => "OMG! We can't handler this action!"]);
+                echo json_encode(['error' => "Error. We can't handler this action!"]);
                 break;
         }
 
@@ -81,7 +81,7 @@ class Server
     public function handlerPayloadError()
     {
         http_response_code(500);
-        echo json_encode(['error' => 'Bad move! Try removing the task instead of deleting its content.']);
+        echo json_encode(['error' => 'Try removing the task instead of deleting its content.']);
     }
 
     public function handlerController($uri, $method, $payload)
@@ -89,7 +89,7 @@ class Server
         if ($uri === '/') {
             http_response_code(200);
             echo json_encode([
-                'hello' => 'Hi, if you need more info please let me know on laerciobernardo@hotmail.com',
+                'hello' => 'Hi, if you need more info please let me know on rodrigopluz@hotmail.com',
                 'tasks' => 'http://localhost:8080/task',
             ]);
 
@@ -107,7 +107,7 @@ class Server
 
         if (!class_exists($className)) {
             http_response_code(500);
-            echo json_encode(['error' => "OMG! We can't handler this action with this namespace!"]);
+            echo json_encode(['error' => "Error. We can't handler this action!"]);
             return;
         }
 
